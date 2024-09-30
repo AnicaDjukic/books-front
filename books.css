@@ -1,0 +1,40 @@
+table {
+    width: 30%;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #4CAF50;
+    text-align: center;
+}
+
+h3 {
+    color: #4CAF50;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: auto;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+button {
+    width: 5%;
+    margin: 0 48%;
+}
