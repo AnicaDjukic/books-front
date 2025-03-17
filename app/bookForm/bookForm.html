@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add or edit book</title>
+    <link rel="stylesheet" href="../../dist/bookForm/bookForm.css">
+    <script src="bookForm.js" defer></script>
+</head>
+
+<body>
+    <div>
+        <form id="form">
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text" />
+            <!-- paragraf za poruku o grešci za naziv -->
+            <span id="nameError"></span>
+            <br />
+
+
+            <label for="author">Author:</label>
+            <input id="author" name="author" type="text" />
+            <!-- paragraf za poruku o grešci za autora -->
+            <span id="authorError"></span>
+            <br />
+        </form>
+        <div class="actions">
+            <button onclick="submit()">Submit</button>
+            <button onclick="cancel()">Cancel</button>
+        </div>
+    </div>
+</body>
+
+</html>
