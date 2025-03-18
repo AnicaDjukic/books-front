@@ -1,4 +1,18 @@
+function initializeForm() {
+
+  let submitBtn = document.querySelector("#submitBtn")
+  submitBtn.addEventListener("click", submit)
+
+  let cancelBtn = document.querySelector("#cancelBtn")
+  cancelBtn.addEventListener("click", function () {
+    window.location.href = '../index.html'
+  })
+
+  get()
+}
+
 function get() {
+
   const urlParams = new URLSearchParams(window.location.search)
   const id = urlParams.get('id') // Preuzimamo vrednost id parametra upita
 
@@ -29,8 +43,6 @@ function get() {
       }
     })
 }
-
-get()
 
 function cancel() {
   window.location.href = '../index.html'
@@ -102,3 +114,5 @@ function submit() {
       }
     })
 }
+
+document.addEventListener('DOMContentLoaded', initializeForm)

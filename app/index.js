@@ -1,3 +1,12 @@
+function initialize() {
+  let addBtn = document.querySelector("#addBtn")
+  addBtn.addEventListener("click", function () {
+    window.location.href = './bookForm/bookForm.html'
+  })
+
+  getAll()
+}
+
 function getAll() {
   fetch('http://localhost:63576/api/books') // Pravi GET zahtev da dobavi sve knjige sa servera
     .then(response => {
@@ -101,8 +110,4 @@ function renderData(data) {
   }
 }
 
-function add() {
-  window.location.href='./bookForm/bookForm.html'
-}
-
-document.addEventListener('DOMContentLoaded', getAll)
+document.addEventListener('DOMContentLoaded', initialize)
