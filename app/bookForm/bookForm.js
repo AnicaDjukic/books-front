@@ -44,10 +44,6 @@ function get() {
     })
 }
 
-function cancel() {
-  window.location.href = '../index.html'
-}
-
 function submit() {
   const form = document.querySelector('#form')
   const formData = new FormData(form)
