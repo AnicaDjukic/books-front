@@ -32,7 +32,7 @@ function getAll() {
 function renderData(data) {
   let table = document.querySelector('table tbody')
   // Ispraznimo tabelu pre nego što dodamo nove podatke
-  table.innerHTML = '';  // Ovo briše sve redove u tabeli
+  table.innerHTML = ''  // Ovo briše sve redove u tabeli
 
   let tableHeader = document.querySelector('table thead') // Zaglavlje tabele
 
@@ -86,9 +86,9 @@ function renderData(data) {
           .then(response => {
             if (!response.ok) {
               // Ako statusni kod nije iz 2xx (npr. 404), kreiramo grešku
-              const error = new Error('Request failed. Status: ' + response.status);
-              error.response = response; // Dodajemo ceo response objekat u grešku
-              throw error;  // Bacamo grešku
+              const error = new Error('Request failed. Status: ' + response.status)
+              error.response = response // Dodajemo ceo response objekat u grešku
+              throw error  // Bacamo grešku
             }
             getAll() // Ponovo učitaj podatke nakon brisanja
           })

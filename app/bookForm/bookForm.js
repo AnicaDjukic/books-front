@@ -24,9 +24,9 @@ function get() {
     .then(response => {
       if (!response.ok) {
         // Ako statusni kod nije iz 2xx (npr. 404), kreiramo grešku
-        const error = new Error('Request failed. Status: ' + response.status);
-        error.response = response; // Dodajemo ceo response objekat u grešku
-        throw error;  // Bacamo grešku
+        const error = new Error('Request failed. Status: ' + response.status)
+        error.response = response // Dodajemo ceo response objekat u grešku
+        throw error  // Bacamo grešku
       }
       return response.json()
     })
@@ -70,8 +70,8 @@ function submit() {
   let method = 'POST'
   let url = 'http://localhost:63576/api/books'
   // Odluka da li je POST ili PUT spram id-ja
-  const urlParams = new URLSearchParams(window.location.search);
-  const id = urlParams.get('id');
+  const urlParams = new URLSearchParams(window.location.search)
+  const id = urlParams.get('id')
   if (id) {
     method = 'PUT'
     url = 'http://localhost:63576/api/books/' + id
@@ -87,9 +87,9 @@ function submit() {
     .then(response => {
       if (!response.ok) {
         // Ako statusni kod nije iz 2xx (npr. 404), kreiramo grešku
-        const error = new Error('Request failed. Status: ' + response.status);
-        error.response = response; // Dodajemo ceo response objekat u grešku
-        throw error;  // Bacamo grešku
+        const error = new Error('Request failed. Status: ' + response.status)
+        error.response = response // Dodajemo ceo response objekat u grešku
+        throw error  // Bacamo grešku
       }
       return response.json()
     })
